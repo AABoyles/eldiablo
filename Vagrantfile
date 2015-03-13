@@ -4,6 +4,9 @@ Vagrant.configure("2") do |config|
   end
   config.vm.box = "ubuntu/trusty64"
   config.vm.box_url = "https://vagrantcloud.com/ubuntu/trusty64"
-  config.vm.provision :shell, :path => "bootstrap.sh"
+  config.vm.provision "shell" do |s|
+    s.path = "bootstrap.sh"
+    s.privileged = false
+  end
 end
 
