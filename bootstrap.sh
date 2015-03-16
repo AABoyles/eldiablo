@@ -33,6 +33,7 @@ unzip nltk_data/tokenizers/punkt.zip -d nltk_data/tokenizers
 sudo mv nltk_data /usr/lib/nltk_data
 
 echo "Automating Jobs..."
+DIR=`pwd`
 PYTHON=`which python`
 CRONJOBS="@hourly cd $DIR/scraper && $PYTHON $DIR/scraper/scraper.py >> $DIR/scraper_stdout.log 2>&1
 0 1 * * * cd $DIR/phoenix_pipeline && $PYTHON $DIR/phoenix_pipeline/pipeline.py >> $DIR/pipeline_stdout.log 2>&1
