@@ -27,10 +27,7 @@ sudo pip install -r phoenix_pipeline/requirements.txt
 sudo pip install -r stanford_pipeline/requirements.txt
 
 echo "Downloading NLTK data..."
-mkdir -p nltk_data/tokenizers
-curl http://www.nltk.org/nltk_data/packages/tokenizers/punkt.zip > nltk_data/tokenizers/punkt.zip
-unzip nltk_data/tokenizers/punkt.zip -d nltk_data/tokenizers
-sudo mv nltk_data /usr/lib/nltk_data
+sudo python -m nltk.downloader -d /usr/share/nltk_data punkt
 
 echo "Automating Jobs..."
 DIR=`pwd`
