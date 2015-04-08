@@ -37,7 +37,6 @@ CRONJOBS="@hourly cd $DIR/scraper && $PYTHON $DIR/scraper/scraper.py >> $DIR/scr
 10 */3 * * * cd $DIR/stanford_pipeline && $PYTHON $DIR/stanford_pipeline/process.py >> $DIR/stanford_stdout.log 2>&1
 "
 echo "$CRONJOBS" > crontab.txt
-sudo crontab crontab.txt
+crontab crontab.txt
 
 echo "All Done!"
-
