@@ -5,6 +5,7 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
 sudo apt-get update
 sudo apt-get -y install zip unzip curl zlib1g-dev git g++ default-jre libxml2-dev libxslt1-dev python-dev python-pip mongodb-10gen htop openjdk-7-jre openjdk-7-jdk maven tomcat7
+sudo apt-get -y upgrade
 
 echo "Downloading Phoenix Pipeline..."
 git clone https://github.com/openeventdata/scraper.git
