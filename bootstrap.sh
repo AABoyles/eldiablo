@@ -19,6 +19,7 @@ DIR=`pwd`
 echo "[StanfordNLP]
 stanford_dir = $DIR/stanford-corenlp" > stanford_pipeline/default_config.ini
 git clone https://github.com/openeventdata/phoenix_pipeline.git
+sed -i 's/8999/8080/' phoenix_pipeline/PHOX_config.ini
 
 echo "Installing Libraries..."
 sudo pip install -r scraper/requirements.txt
